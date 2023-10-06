@@ -1,0 +1,19 @@
+W1 : 
+ fundamentals of js
+ breakup: 
+    diff between let, var and const  , hoisting.
+    arrays, objects, strings
+    functions
+    scope chain , closures
+    primitive, non primitive.
+    this keyword
+    window
+
+W2 :
+ DOM (document object model)
+
+W3: 
+    projects 
+    Employee management system
+    Jira dashboard
+    Google sheets clone
