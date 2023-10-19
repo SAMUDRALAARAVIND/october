@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container > .child > b {
+            color: red;
+        }
+        .child {
+            border: 1px solid blue ;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <input type="number" name="rollnumber" id="rollnumber" >
+        <div class="child">
+            <span>span message</span>
+            <b>bold message</b>
+        </div>
+        <button class="btn">Click Me</button>
+    </div>
+
+
+    <button onclick="action()">Take Action</button>
+    <script src="./index.js"></script>
+</body>
+</html>
