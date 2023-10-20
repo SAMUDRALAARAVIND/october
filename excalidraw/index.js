@@ -41,6 +41,9 @@ function drawLine(p1, p2, color = "blue", thickness = 2) {
 // drawLine( {x: 50, y: 150 } , {x: 300, y: 40 }, "blue", 10)
 // drawLine( {x: 500, y: 500 } , {x: 600, y: 600 }, "tomato", 5)
 
+/*
+Dynamic line drawing: 
+
 function onMouseDown(event) {
     let {clientX , clientY} = event; 
     // {clientX, clientY} is position where use makes the mousedown.
@@ -58,6 +61,59 @@ function onMouseUp(event){
     c.stroke();
     c.closePath();
 }
+*/
 
-canvas.addEventListener("mousedown", onMouseDown); 
-canvas.addEventListener("mouseup", onMouseUp);
+
+// canvas.addEventListener("mousedown", onMouseDown); 
+// canvas.addEventListener("mouseup", onMouseUp);
+
+
+/*
+// Continuos lines: 
+
+c.beginPath();
+c.strokeStyle = "red"; 
+c.lineWidth  = 4 ;
+c.moveTo( 100, 100 );  // p1
+c.lineTo( 300, 100 ); // p2
+c.stroke(); // p1 => p2
+c.closePath();
+c.beginPath();
+c.moveTo(300, 100 );
+c.lineTo( 350, 20 ) ;
+c.lineWidth = 2;
+c.strokeStyle = "blue"; 
+c.stroke(); // strokes out from starting beginPath
+*/
+
+/**
+ * Free hand drawing: 
+ */
+
+
+let drawingColor = "blue";
+let previousPosition = null ;
+
+function onMouseDown(e) {
+    previousPosition = [ e.clientX , e.clientY];
+    c.strokeStyle = drawingColor;
+    c.lineWidth = 2; 
+    canvas.addEventListener("mousemove", onMouseMove);
+    canvas.addEventListener("mouseup", onMouseUp); 
+}
+
+function onMouseMove(e){ 
+    // for the first time inside this  
+    let currentPosition = [ e.clientX , e.clientY ];
+    // draw line from previous position to current position ;
+    c.beginPath();
+    c.moveTo(...previousPosition);
+    c.lineTo(...currentPosition);
+    c.stroke();
+    c.closePath();
+    previousPosition = currentPosition ;
+}
+
+function onMouseUp(e){ 
+    canvas.removeEventListener("mousemove", onMouseMove);
+}

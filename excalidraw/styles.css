@@ -9,7 +9,7 @@
     position: relative ;
 }
 #canvas {
-    cursor: crosshair;
+    /* cursor: crosshair; */
 }
 
 #top {
@@ -41,9 +41,14 @@
     cursor: pointer;
     font-size: 16px !important;
 }
-.btn:hover {
+.btn:hover{
     background-color: #ECECF3;
     border-radius: 4px;
+}
+.active {
+    background-color: #3a34eb;
+    border-radius: 4px;
+    color: white;
 }
 
 #bottom {
