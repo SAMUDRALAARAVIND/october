@@ -10,6 +10,7 @@
 }
 #canvas {
     /* cursor: crosshair; */
+    object-fit: contain;
 }
 
 #top {

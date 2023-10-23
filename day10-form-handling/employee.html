@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <form class="form">
+            <input type="text" name="name" required placeholder="Employee Name">
+            <input type="email" name="email" required placeholder="Email">
+            <input type="number" name="salary" required placeholder="Salary">
+            <select name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="others">Others</option>
+            </select>
+            <input type="text" name="companyName" required placeholder="Company's Name">
+            <select name="role">
+                <option value="QA">QA</option>
+                <option value="SDE">SDE</option>
+                <option value="PRODUCT">Product Analyst</option>
+            </select>
+            <button>Add Employee</button>
+        </form>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Company Name</th>
+                        <th>Salary</th>
+                        <th>Gender</th>
+                        <th>Role</th>
+                        <th>Email</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./employee.js"></script>
+</body>
+</html>

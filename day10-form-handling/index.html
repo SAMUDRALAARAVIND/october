@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handling</title>
+</head>
+<body>
+    <!-- <input type="email" placeholder="Email" >
+    <select>
+        <option value="MATHS">Maths</option>
+        <option value="PHYSICS">Phy</option>
+        <option value="CHEMISTRY">Chemistry</option>
+    </select> -->
+    <!-- <button id="btn">Collect Email</button> -->
+
+    <h1>Student Data</h1>
+    <form>
+        <input type="text" name="name" placeholder="Name"  required>
+        <input type="number" name="rollNumber" placeholder="Roll Number" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <div>
+            <div>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+            </div>
+            <div>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+            <div>
+                <input type="radio" id="others" name="gender" value="others" required>
+                <label for="others">Others</label>
+            </div>
+        </div>
+        <button>Submit Form</button>
+        <!-- By default buttons inside form acts as submit button. -->
+    </form>
+
+    <!-- name=Aravind&rollNumber=184253&email=sa961835%40student.nitw.ac.in&gender=male
+
+    {
+        name: "Aravind",
+        rollNumber: 184253,
+        email: "sa961835@student.nitw.ac.in",
+        gender: "male"
+    } -->
+
+    <script src="./index.js"></script>
+</body>
+</html>
