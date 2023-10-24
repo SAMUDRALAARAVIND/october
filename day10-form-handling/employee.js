@@ -1,5 +1,6 @@
 const tbody = document.querySelector("tbody");
 const form = document.querySelector("form");
+const submitButton = document.querySelector("form > button");
 
 function deleteRecord(event) {
     const buttonRef = event.target ;
@@ -19,14 +20,23 @@ function addEmployee(employee) {
         tr.appendChild(td);
     }
 
-    // <td><button>delete</button></td>
+    // <td><button>delete</button> <button>edit</button></td>
     const options = document.createElement("td");
+
     let deleteButton = document.createElement("button");
     deleteButton.innerText = "delete" ;
+
+    let editButton = document.createElement("button");
+    editButton.innerText = "edit";
+
+
+
     // deleteButton => it is a HTML element.
     deleteButton.addEventListener("click", deleteRecord)
+    editButton.addEventListener("click", onEditClick);
 
     options.appendChild(deleteButton);
+    options.appendChild(editButton);
 
     tr.appendChild(options)
     tbody.appendChild(tr);
@@ -35,6 +45,8 @@ function addEmployee(employee) {
 // onSubmitForm => will be executed whenever user submits the new employee details.
 function onSubmitForm(event) {
     event.preventDefault(); // to avoid the submission and reload of the page.
+
+
     let employeeData = { 
         name: form.name.value,
         companyName: form.companyName.value,
@@ -44,8 +56,13 @@ function onSubmitForm(event) {
         email: form.email.value
     }
 
-    addEmployee(employeeData);
-    // form.reset();
+    if(editOptions.isEditing){
+        editEmployee(employeeData);
+    }
+    else {
+        addEmployee(employeeData);
+    }
+    form.reset();
 }
 
 form.addEventListener("submit", onSubmitForm)
