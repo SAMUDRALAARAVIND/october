@@ -1,0 +1,76 @@
+*{
+    font-size: 14px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.fr-aic{
+    display: flex;
+    align-items: center;
+}
+.create-issue-btn{
+    border: none;
+    background-color: transparent;
+    color: #65728A;
+    font-weight: 400;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    padding: 4px;
+}
+.create-issue-btn > .material-icons {
+    font-size: 16px !important;
+}
+.create-issue-btn:hover {
+    background-color: #DEE1E5;
+}
+section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.container {
+    min-width: min(250px , 90vw);
+    height: 400px;
+    background-color: #F4F5F7;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+.container > p {
+    color: #65728A;
+    font-size: 18px;
+}
+
+input {
+    width: 95%;
+    border: 2px solid #2584FF;
+    resize: none;
+    border-radius: 2px;
+    padding-bottom: 30px;
+}
+
+.hide {
+    display: none;
+}
+
+.card {
+    background-color: white;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    color: #182A4D;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px #182a4d9c;
+}
+.card > span {
+    font-weight: 500;
+}
+.card > .material-icons {
+    cursor: pointer;
+    font-size: 16px !important;
+}
