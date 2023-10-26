@@ -16,7 +16,7 @@
             <div class="options">
                 <button class="btn material-icons" id="pencil">edit</button>
                 <button class="btn material-symbols-outlined">brightness_1</button>
-                <button class="btn material-symbols-outlined">check_box_outline_blank</button>
+                <button class="btn material-symbols-outlined" onclick="enableRectDrawing()">check_box_outline_blank</button>
                 <button class="btn material-symbols-outlined">ink_eraser</button>
                 <input type="color" id="color-picker">
             </div>
@@ -25,12 +25,13 @@
         <canvas id="canvas"></canvas>
         <div id="bottom">
             <div class="options">
-                <button class="btn material-icons">undo</button>
-                <button class="btn material-icons">redo</button>
+                <button class="btn material-icons" id="undo">undo</button>
+                <button class="btn material-icons" id="redo">redo</button>
             </div>
         </div>
     </div>
     <script src="./index.js"></script>
     <script src="freehand.js"></script>
+    <script src="undoredo.js"></script>
 </body>
 </html>
