@@ -9,7 +9,6 @@ issueInput.addEventListener("blur", onBlurCreateIssueInput);
 issueInput.addEventListener("keyup", onEnterInput);
 
 function toggleCreateIssueOptions(){
-    console.log("toggle");
     createIssue.classList.toggle("hide");
     issueInput.classList.toggle("hide");
     if(!issueInput.classList.contains("hide")){
@@ -53,7 +52,11 @@ function onEnterInput(e){
             <span class="material-icons" onclick="deleteCard(this)">delete</span>
             `;
 
-            issueInput.value = "" ;
+        issueCard.draggable = true ; 
+        // since issue cards needs to draggable
+        issueCard.addEventListener("dragstart", onDragStart);
+        
+        issueInput.value = "" ;
         todoContainer.appendChild(issueCard);
         toggleCreateIssueOptions();
     }
