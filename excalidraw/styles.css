@@ -63,3 +63,20 @@
     padding: 4px 10px;
     border-radius: 5px;
 }
+
+
+.form {
+    position: fixed;
+    left: 10px;
+    top: 30vh ;
+    border: 1px solid #ededed;
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}

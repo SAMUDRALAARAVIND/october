@@ -1,20 +1,20 @@
 const pencil = document.getElementById("pencil");
-let isPencilActive = false ;// intially the pencil is inactive.
+let isPencilActive = false;// intially the pencil is inactive.
 
-const colorPicker = document.getElementById("color-picker");
+// const colorPicker = document.getElementById("color-picker");
 
 
-colorPicker.addEventListener("change", () => {
-    drawingColor = colorPicker.value ;
-});
+// colorPicker.addEventListener("change", () => {
+//     drawingColor = colorPicker.value ;
+// });
 
 function onPencilClick() {
     pencil.classList.toggle("active")
-    isPencilActive = !isPencilActive ; // enabling the drawing 
+    isPencilActive = !isPencilActive; // enabling the drawing 
     // isPencilActive = !false = true
-    if(isPencilActive) {
+    if (isPencilActive) {
         canvas.style.cursor = "crosshair";
-        canvas.addEventListener("mousedown", onMouseDown); 
+        canvas.addEventListener("mousedown", onMouseDown);
     }
     else {
         canvas.style.cursor = "auto";
@@ -22,4 +22,4 @@ function onPencilClick() {
     }
 }
 
-pencil.addEventListener("click", onPencilClick) ;
+pencil.addEventListener("click", onPencilClick);
