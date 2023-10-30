@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: root-font;
+}
+.root-container {
+  width: 100vw ;
+  height: 80vh ;
+  overflow: scroll;
+}
+
+.header{ 
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  width: fit-content;
+}
+.cell {
+  min-width: 150px;
+  padding: 5px;
+  border: 1px solid #C4C7C5 ;
+}
+.header-cell {
+  text-align: center;
+  color: #444746;
+}
+.sno-cell {
+  text-align: center;
+}
+.body {
+  display: flex;
+ width: fit-content;
+}
+.sno {
+  position: sticky;
+  left: 0;
+  background-color: #fff;
+}
+.header > div:nth-child(1) {
+  left: 0;
+  position: sticky;
+  z-index: 100;
+  background-color: #e7e7e7;
+}
+.main {
+  height: 100px;
+}
+
+.row {
+  display: flex;
+}
+
+@font-face {
+  font-family: root-font;
+  src: url(./root-font.ttf);
+}

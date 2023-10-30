@@ -1,7 +1,5 @@
 
 let intialPosition = null;
-
-// this arrays will hold the image objects after every mouse up.
 const history = [];
 let historyIndex = -1;
 
@@ -9,7 +7,6 @@ function onMouseDown(e) {
     if (!(actions.circle || actions.rectangle || actions.eraser || actions.freehand || actions.line)) {
         return;
     }
-    console.log("inside");
     intialPosition = { x: e.clientX, y: e.clientY };
     startIndex = history.length - 1;
     c.strokeStyle = formState.strokestyle;

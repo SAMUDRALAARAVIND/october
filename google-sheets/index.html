@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Sheets</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./options.css" />
+  </head>
+  <body>
+    <section class="tools">
+      <div class="options">
+        <select name="fontfamily" id="fontfamily">
+          <option value="sans">Sans pro</option>
+          <option value="monospace">MonoSpace</option>
+          <option value="sans-serif">Sans Serif</option>
+        </select>
+        <input
+          type="number"
+          name="fontsize"
+          min="8"
+          max="24"
+          value="16"
+          id="fontsize"
+          placeholder="Font Size"
+        />
+        <span class="material-icons option-btn"> format_bold </span>
+        <span class="material-icons option-btn">format_italic</span>
+        <span class="material-icons option-btn">format_underlined</span>
+        <span class="material-icons option-btn">format_align_left</span>
+        <span class="material-icons option-btn">format_align_right</span>
+        <span class="material-icons option-btn">format_align_center</span>
+        <span class="material-icons option-btn">format_color_text</span>
+        <span class="material-icons option-btn">format_color_fill</span>
+      </div>
+      <div class="bottom-section">
+        <div id="active-cell">null</div>
+        <input
+          oninput="onChangeFontSize()"
+          type="text"
+          class="expression"
+          placeholder="f( x )"
+        />
+      </div>
+    </section>
+
+    <section class="root-container">
+      <div class="header"></div>
+      <div class="body">
+        <div class="sno"></div>
+        <div class="main"></div>
+      </div>
+    </section>
+
+    <script src="options.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

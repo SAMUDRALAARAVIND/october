@@ -1,0 +1,39 @@
+.options {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px 10px;
+    width: 50vw ;
+    margin: auto;
+}
+.options input, .options select {
+    flex-grow: 1;
+}
+.options .material-icons {
+    font-size: 30px !important;
+}
+
+.bottom-section{ 
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+    align-items: center;
+}
+.bottom-section input {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+#active-cell {
+    background-color: #ededed;
+    padding: 10px;
+}
+
+.option-btn {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+}
+.option-btn:hover {
+    background-color: #ededed;
+}
