@@ -13,11 +13,13 @@
   </head>
   <body>
     <section class="tools">
-      <div class="options">
+      <form id="form" class="options" onchange="onFormChange()">
         <select name="fontfamily" id="fontfamily">
-          <option value="sans">Sans pro</option>
-          <option value="monospace">MonoSpace</option>
-          <option value="sans-serif">Sans Serif</option>
+          <option value="'Courier New', Courier, monospace">Courier New</option>
+          <option value="'Times New Roman', Times, serif">
+            Times New Roman
+          </option>
+          <option value="Arial, Helvetica, sans-serif">Arial Helvatica</option>
         </select>
         <input
           type="number"
@@ -28,15 +30,97 @@
           id="fontsize"
           placeholder="Font Size"
         />
-        <span class="material-icons option-btn"> format_bold </span>
-        <span class="material-icons option-btn">format_italic</span>
-        <span class="material-icons option-btn">format_underlined</span>
-        <span class="material-icons option-btn">format_align_left</span>
-        <span class="material-icons option-btn">format_align_right</span>
-        <span class="material-icons option-btn">format_align_center</span>
-        <span class="material-icons option-btn">format_color_text</span>
-        <span class="material-icons option-btn">format_color_fill</span>
-      </div>
+        <div>
+          <input type="checkbox" id="bold" class="hidden-input" name="bold" />
+          <label class="material-icons option-btn" for="bold">
+            format_bold
+          </label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="italic"
+            class="hidden-input"
+            name="italic"
+          />
+          <label class="material-icons option-btn" for="italic"
+            >format_italic</label
+          >
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="underlined"
+            class="hidden-input"
+            name="underlined"
+          />
+          <label class="material-icons option-btn" for="underlined"
+            >format_underlined</label
+          >
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            name="textalign"
+            id="left"
+            class="hidden-input"
+            checked
+            value="left"
+          />
+          <label class="material-icons option-btn" for="left"
+            >format_align_left</label
+          >
+
+          <input
+            type="radio"
+            name="textalign"
+            id="right"
+            class="hidden-input"
+            value="right"
+          />
+          <label class="material-icons option-btn" for="right"
+            >format_align_right</label
+          >
+
+          <input
+            type="radio"
+            name="textalign"
+            id="center"
+            class="hidden-input"
+            value="center"
+          />
+          <label class="material-icons option-btn" for="center"
+            >format_align_center</label
+          >
+        </div>
+
+        <div>
+          <input
+            type="color"
+            name="textcolor"
+            id="textcolor"
+            class="hidden-input"
+            value="#000000"
+          />
+          <label class="material-icons option-btn" for="textcolor"
+            >format_color_text</label
+          >
+        </div>
+
+        <div>
+          <input
+            type="color"
+            name="bgcolor"
+            id="bgcolor"
+            class="hidden-input"
+            value="#ffffff"
+          />
+          <label class="material-icons option-btn" for="bgcolor"
+            >format_color_fill</label
+          >
+        </div>
+      </form>
       <div class="bottom-section">
         <div id="active-cell">null</div>
         <input

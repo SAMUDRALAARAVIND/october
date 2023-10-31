@@ -37,3 +37,12 @@
 .option-btn:hover {
     background-color: #ededed;
 }
+
+.hidden-input {
+    width: 0; 
+    height: 0;
+    border: none ;
+}
+.hidden-input:checked + label {
+    background-color: #ededed;
+}
