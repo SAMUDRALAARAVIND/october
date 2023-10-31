@@ -1,13 +1,14 @@
 .options {
     display: flex;
-    gap: 30px;
+    gap: 10px;
     justify-content: center;
     padding: 20px 10px;
-    width: 50vw ;
-    margin: auto;
+    /* width: 60vw ; */
+    /* margin: auto; */
+    align-items: center;
 }
 .options input, .options select {
-    flex-grow: 1;
+    width: 100px;
 }
 .options .material-icons {
     font-size: 30px !important;
@@ -39,7 +40,7 @@
 }
 
 .hidden-input {
-    width: 0; 
+    width: 0 !important; 
     height: 0;
     border: none ;
 }

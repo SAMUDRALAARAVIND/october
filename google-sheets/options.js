@@ -15,7 +15,8 @@ const defaultProperties = {
     backgroundColor: "#ffffff",
     isBold: false,
     isItalic: false,
-    isUnderlined: false
+    isUnderlined: false,
+    value: ''
 }
 
 function onCellFocus(event) {
@@ -80,7 +81,7 @@ function onFormChange() {
     // state = {} 
     // state["C2"] = currentState ;
     // state = { C2: currentState }
-    state[activeElement.id] = currentState;
+    state[activeElement.id] = { ...currentState, value: activeElement.innerText };
 }
 
 function applyStylesToCell(styleObject) {
@@ -90,13 +91,8 @@ function applyStylesToCell(styleObject) {
     activeElement.style.color = styleObject.textColor;
     activeElement.style.backgroundColor = styleObject.backgroundColor;
     activeElement.style.textAlign = styleObject.textAlign;
-    if (styleObject.isBold) {
-        activeElement.style.fontWeight = "bold";
-    }
-    if (styleObject.isItalic) {
-        activeElement.style.fontStyle = "italic";
-    }
-    if (styleObject.isUnderlined) {
-        activeElement.style.textDecoration = "underline";
-    }
+
+    activeElement.style.fontWeight = styleObject.isBold ? "bold" : "normal";
+    activeElement.style.fontStyle = styleObject.isItalic ? "italic" : "normal";
+    activeElement.style.textDecoration = styleObject.isUnderlined ? "underline" : "none";
 }
